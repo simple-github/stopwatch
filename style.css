@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Pixelify+Sans&display=swap'); /*Importing Font */
+
+#lap-times::-webkit-scrollbar { /*Hides the scrollbar */
+    display: none;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  "Exo 2", sans-serif,"Roboto Mono","Arial"; 
+}
+#main-box
+{
+    min-width: 100vw;
+    min-height:100vh;
+    flex-direction: column;
+    position:relative;
+    /* height:70vh;
+    width:30vw; */
+    box-sizing: border-box;
+    background-color:black;
+    border:5px solid white;
+    border-radius:20px;
+    padding:0%;
+    overflow:hidden;    
+}
+#main-box>h1
+{
+    position: absolute;
+    text-transform: uppercase;
+    left:12.5%;
+    top: 5%;
+    box-sizing: border-box;
+    font-size: 5vh;
+    transform:scale(150%);
+    color:grey;
+    text-decoration: underline;
+    
+}
+#lap-list
+{
+    position:absolute;
+    height:100%;
+    width:30%;
+    box-sizing: border-box;
+    background-color:black;
+    /* border:5px solid black; */
+    /* border-radius:20px; */
+    padding:10%;
+    left:70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:grey;
+}
+#lap-list>h3
+{
+    text-transform: uppercase;
+    position:fixed;
+    font-size: 5vh;
+    top:5%;
+    color:grey;
+    text-decoration: underline;
+    
+}
+#lap-times
+{
+    position:absolute;
+    top:15%;
+    bottom:1%;
+    width:10vw;
+    overflow:scroll;
+    font-family:  "Exo 2", sans-serif,"Roboto Mono","Arial"; 
+}
+#time
+{
+    position: absolute;
+    left:08%;
+    top:45%;
+    transform:scale(1.2);
+    color:white;
+    padding-left: 2%;
+}
+.digit {
+    font-size: 5vh;
+    color: white;
+}
+ 
+.txt {
+    font-size: 2vh;
+    color: white;
+}
+.btn
+{
+    position: absolute;
+	top: 80%;
+   	background-color: black;
+	border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 10%;
+    width:18%;
+    font-size: 5vh;
+    padding:5px;
+    text-align: center;
+    color:white;
+    box-shadow: 2px 2px 0 0 black,4px 4px 0 0 white;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.btn:hover
+{
+ color:black;
+ background-color: white;
+ box-shadow: 6px 6px 0 0 black,10px 10px 0 0 white;
+ transform:translate(-4px,-4px);
+ transition-duration: 200ms;
+}
+.btn:active
+{
+ color:black;
+ background-color: white;
+ box-shadow: 4px 4px 0 0 black,8px 8px 0 0 white;
+ transform:translate(-1px,-1px);
+ transition-duration: 200ms;
+}
+.btn:disabled
+{
+    color:rgb(254, 254, 254);
+    background-color: rgb(111, 111, 111);  
+    transition-duration: 200ms;  
+}
+#start
+{
+    left:5%;
+}
+#lap
+{
+
+    left:25%;
+}
+#reset
+{
+    left:45%;
+}
+/* Media queries for responsiveness */
+
+/* @media (max-width: 992px) {
+    /* Styles for tablets (up to 992px width) */
+
+/*} */
+
+@media (max-width: 768px) {
+    /* Styles for mobile devices (up to 767px width) */
+    /* #main-box {
+        min-width: 60vw;
+    } */
+    #main-box>h1 {
+        font-size: 150%;
+        transition-duration: 200ms;
+    }
+    #lap-list>h3 {
+        font-size: 150%;
+        transition-duration: 200ms;
+    }
+    #time
+    {
+    transform:scale(1.4);
+    padding-left: 5%;
+    }
+    .digit {
+        font-size: 150%;
+        transition-duration: 200ms;
+    }
+    .txt {
+        font-size: 80%;
+        transition-duration: 200ms;
+    }
+    .btn {
+        height: 8%;
+        width: 15%;
+        font-size: 150%;
+        transition-duration: 200ms;
+    }
+}
+
+@media (max-width: 540px) {
+    /* Styles for smaller screens (up to 480px width) */
+    #main-box>h1 {
+        font-size: inherit;
+        transition-duration: 200ms;
+    }
+    #lap-list>h3 {
+        font-size: inherit;
+        transition-duration: 200ms;
+    }
+    .digit {
+        font-size: 120%;
+        transition-duration: 200ms;
+    }
+    .txt {
+        font-size: 70%;
+        transition-duration: 200ms;
+    }
+    .btn {
+        height: 7%;
+        width: 15%;
+        font-size: inherit;
+        transition-duration: 200ms;
+        overflow: hidden;
+    }
+    #micro{
+        visibility: hidden;
+        transition-duration: 200ms;
+    }
+    #micro_txt{
+        visibility: hidden;
+        transition-duration: 200ms;
+    }
+}
+@media (max-width: 320px){
+    /* Styles for smaller screens (up to 480px width) */
+    #main-box>h1 {
+        font-size: inherit;
+        transition-duration: 200ms;
+    }
+    #lap-list>h3 {
+        font-size: inherit;
+        transition-duration: 200ms;
+    }
+    .digit {
+        font-size: 110%;
+        transition-duration: 200ms;
+    }
+    #time{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+        left:20%;
+        transition-duration: 200ms;
+
+    }
+    .txt {
+        font-size: 60%;
+        transition-duration: 200ms;
+    }
+    .btn {
+        height: 6%;
+        width: 15%;
+        font-size: inherit;
+        font-size: 0px;
+        border-radius:50%;
+        border: 0px;
+        overflow: hidden;
+        transition-duration: 200ms;
+
+    }
+    #start{
+        background: url('img/play.png');
+        background-repeat:no-repeat;
+        background-position:center;
+        image-rendering: auto;
+        background-size:70%;
+        background-color: white;
+        transition-duration: 200ms;
+    }
+    #lap{
+        background: url('img/lap.png');
+        background-repeat:no-repeat;
+        background-position:center;
+        image-rendering: auto;
+        background-size:70%;
+        background-color: white;
+        transition-duration: 200ms;
+    }
+    #reset{
+        background: url('img/reset.png');
+        background-repeat:no-repeat;
+        background-position:center;
+        image-rendering: auto;
+        background-size:70%;
+        background-color: white;
+        transition-duration: 200ms;
+    }
+    #buttons {
+        overflow: hidden;
+        
+
+    }
+    .btn:hover
+    {
+     transform:translate(-1px,-1px);
+     transition-duration: 200ms;
+    }
+    #micro{
+        visibility:visible;
+        transition-duration: 200ms;
+    }
+    #micro_txt{
+        visibility:visible;
+        transition-duration: 200ms;
+    }
+}
