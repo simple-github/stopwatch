@@ -3,7 +3,8 @@
 This is a simple stopwatch web application built using HTML, CSS, and JavaScript. It allows users to start, pause, and reset the timer. Additionally, users can record lap times, and the app displays a list of recorded laps.
 
 
--get a glimpse<https://simple-github.github.io/stopwatch/>
+-get a glimpse
+<https://simple-github.github.io/stopwatch/>
 
 ## Features
 
